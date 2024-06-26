@@ -1,4 +1,4 @@
-package exceptions;
+package com.desafio.teste.exceptions;
 
 import lombok.Getter;
 

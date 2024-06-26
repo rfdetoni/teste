@@ -3,6 +3,7 @@ package com.desafio.teste.entities;
 import com.desafio.teste.entities.model.BasicEntityData;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
@@ -26,8 +27,10 @@ public class Incident  extends BasicEntityData {
     @Column(name = "idIncident", nullable = false)
     private UUID idIncident;
 
+    @NotNull
     private String name;
 
+    @NotNull
     private String description;
 
     private LocalDateTime closedAt;

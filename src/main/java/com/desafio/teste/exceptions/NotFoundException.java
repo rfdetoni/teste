@@ -1,4 +1,4 @@
-package exceptions;
+package com.desafio.teste.exceptions;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 

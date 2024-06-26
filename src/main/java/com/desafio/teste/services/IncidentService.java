@@ -1,10 +1,10 @@
-package com.desafio.teste;
+package com.desafio.teste.services;
 
 import com.desafio.teste.dtos.requests.IncidentRequestDTO;
 import com.desafio.teste.dtos.responses.IncidentResponseDTO;
 import com.desafio.teste.repositories.IncidentRepository;
-import exceptions.Errors;
-import exceptions.NotFoundException;
+import com.desafio.teste.exceptions.Errors;
+import com.desafio.teste.exceptions.NotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -12,6 +12,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.validation.annotation.Validated;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -19,6 +20,7 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
+@Validated
 public class IncidentService {
 
     private final IncidentRepository incidentRepository;
