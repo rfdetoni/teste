@@ -1,5 +1,25 @@
-# Desafio
+# Desafio proposto
 Desafio Desenvolvedor Java Pleno
+
+Criar uma aplicação para cadastro de incidentes.
+A aplicação deverá fornecer operações REST que possibilitem o cadastro, manutenção,
+remoção e pesquisa de incidentes.
+Um incidente é composto pelos campos (coloque mais campos se achar necessário).
+  - idIncident
+  - name
+  - description
+  - createdAt
+  - updatedAt
+  - closedAt
+
+Funcionalidades
+Sua aplicação deve ter as funcionalidades abaixo:
+     • Cadastrar Incidentes
+     • Atualizar Incidentes
+     • Deletar Incidentes
+     • Listar todos incidentes
+     • Listar incidente por ID
+     • Listar os últimos 20 incidentes ordenados por ordem decrescente
 
 # Tecnologias aplicadas:
    - Java 17
