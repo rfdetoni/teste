@@ -52,7 +52,7 @@ public class IncidentController {
     }
 
     @Operation(
-            summary = "Get the last 20",
+            summary = "Get the last 20 incidents",
             description = "Get a list of the last 20 incidents that are not deleted, ordered by its creation date, descending",
             tags = {"Get"})
     @GetMapping("/last20")
