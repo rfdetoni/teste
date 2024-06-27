@@ -54,13 +54,13 @@ public class IncidentService {
     }
 
     public List<IncidentResponseDTO> getAll(){
-        var incidents = incidentRepository.getAll();
+        var incidents = incidentRepository.getAll().orElseThrow( () -> new NotFoundException(Errors.INCIDENT_NOT_FOUND));
         return incidents.stream().map(IncidentResponseDTO::new).toList();
     }
 
     public Page<IncidentResponseDTO> getAllPaged(int page, int size){
         Pageable pageable = PageRequest.of( page, size, Sort.by("createdAt").descending());
-        var incidents = incidentRepository.findAll(pageable );
+        var incidents = incidentRepository.findAll(pageable);
         return incidents.map(IncidentResponseDTO::new);
     }
 

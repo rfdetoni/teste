@@ -16,7 +16,7 @@ public interface IncidentRepository extends JpaRepository<Incident, UUID> {
     Optional<Incident> findById(UUID idIncident);
 
     @Query("select i from Incident i where i.idIncident = :idIncident and i.deletedAt is null")
-    List<Incident> getAll();
+    Optional<List<Incident>> getAll();
 
     Page<Incident> findAll(Pageable pageable);
 }

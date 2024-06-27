@@ -10,6 +10,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -75,8 +76,9 @@ public class IncidentController {
             description = "Delete logically a incident, it is not physically deleted",
             tags = {"Delete"})
     @DeleteMapping("/{idIncident}")
-    public HttpStatus deleteIncident(@PathVariable("idIncident")  UUID idIncident){
-        return incidentService.delete( idIncident );
+    public ResponseEntity<Void> deleteIncident(@PathVariable("idIncident")  UUID idIncident){
+        incidentService.delete( idIncident );
+        return ResponseEntity.noContent().build();
     }
 
     @Operation(
